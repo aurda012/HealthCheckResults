@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170316185151) do
+ActiveRecord::Schema.define(version: 20170316213635) do
 
   create_table "survey_results", force: :cascade do |t|
     t.string   "email"
@@ -18,8 +18,14 @@ ActiveRecord::Schema.define(version: 20170316185151) do
     t.string   "title"
     t.string   "company"
     t.string   "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "all_topic_scores"
+    t.string   "how_many_scores"
+    t.string   "total_score"
+    t.string   "version"
+    t.string   "all_questions"
+    t.string   "how_many_questions"
   end
 
 end
