@@ -10,21 +10,29 @@
       <th>Title</th>
       <th>Company</th>
       <th>Phone</th>
-      <th colspan="3"></th>
+      <th>Contact Preference</th>
+      <th>All Topic Scores</th>
+      <th>How Many Scores</th>
+      <th>Version</th>
+      <th>All Questions</th>
+      <th>How Many Questions</th>
     </tr>
   </thead>
 
   <tbody>
     <% @survey_results.each do |survey_result| %>
       <tr>
-        <td><%= survey_result.email %></td>
-        <td><%= survey_result.name %></td>
-        <td><%= survey_result.title %></td>
-        <td><%= survey_result.company %></td>
-        <td><%= survey_result.phone %></td>
-        <td><%= link_to 'Show', survey_result %></td>
-        <td><%= link_to 'Edit', edit_survey_result_path(survey_result) %></td>
-        <td><%= link_to 'Destroy', survey_result, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= survey_result["email"] %></td>
+        <td><%= survey_result["name"] %></td>
+        <td><%= survey_result["title"] %></td>
+        <td><%= survey_result["company"] %></td>
+        <td><%= survey_result["phone"] %></td>
+        <td><%= survey_result["contact_preference"] %></td>
+        <td><%= survey_result["all_topic_scores"] %></td>
+        <td><%= survey_result["how_many_scores"] %></td>
+        <td><%= survey_result["version"] %></td>
+        <td><%= survey_result["all_questions"] %></td>
+        <td><%= survey_result["how_many_questions"] %></td>
       </tr>
     <% end %>
   </tbody>

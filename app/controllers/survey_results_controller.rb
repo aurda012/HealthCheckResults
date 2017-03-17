@@ -1,8 +1,13 @@
 class SurveyResultsController < ApplicationController
   before_action :set_survey_result, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /survey_results
   # GET /survey_results.json
+  def index
+    @hotels = HTTParty.get('https://shielded-wave-66393.herokuapp.com',
+    :headers =>{'Content-Type' => 'application/json'} )
+  end
+  
   def index
     @survey_results = SurveyResult.all
   end

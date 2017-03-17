@@ -1,3 +1,9 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  include ActionController::Live
+  def index
+  end
+
+  def create
+    render json: params
+  end
 end

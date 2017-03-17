@@ -17,6 +17,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'json', '~> 2.0', '>= 2.0.3'
+gem 'httparty'
 
 group :development, :test do
   gem 'sqlite3'
