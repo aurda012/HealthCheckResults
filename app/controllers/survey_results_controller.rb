@@ -3,13 +3,10 @@ class SurveyResultsController < ApplicationController
   
   # GET /survey_results
   # GET /survey_results.json
-  def index
-    @hotels = HTTParty.get('https://shielded-wave-66393.herokuapp.com',
-    :headers =>{'Content-Type' => 'application/json'} )
-  end
   
   def index
-    @survey_results = SurveyResult.all
+    @survey_results = HTTParty.get('https://shielded-wave-66393.herokuapp.com',
+    :headers =>{'Content-Type' => 'application/json'} )
   end
 
   # GET /survey_results/1

@@ -1,1 +1,1 @@
-json.partial! "survey_results/survey_result", survey_result: @survey_result
+json.extract! @survey_result, :id, :email, :name, :title, :company, :phone, :contact_preference, :all_topic_scores, :how_many_scores, :version, :all_questions, :how_many_questions, :created_at, :updated_at
