@@ -1,25 +1,11 @@
-# README
+# MyPortfolio Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is a Ruby on Rails 5 application that sends HTTP requests to an external survey site, creates PDF's from survey results, emails PDF's, and has backdoor for admin users to easily see data.
+### Features
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# HealthCheckResults
+- HTTParty Implementation
+- JSON parsing
+- Prawn Implementation
+- Creates PDF's based on results
+- Uses mailers
+- Admin Secure Login
