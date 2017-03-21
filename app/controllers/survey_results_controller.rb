@@ -7,11 +7,22 @@ class SurveyResultsController < ApplicationController
   def index
     @survey_results = HTTParty.get('https://shielded-wave-66393.herokuapp.com',
     :headers =>{'Content-Type' => 'application/json'} )
+    @survey_results = SurveyResults.all_(current_customer)
   end
 
   # GET /survey_results/1
   # GET /survey_results/1.json
   def show
+    @survey_result = SurveyResult.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = SurveyResultPdf.new(@survey_result, view_context)
+        send_data pdf.render, filename: 
+        "survey_result_#{@survey_result.created_at.strftime("%d/%m/%Y")}.pdf",
+        type: "application/pdf"
+      end
+    end
   end
 
   # GET /survey_results/new

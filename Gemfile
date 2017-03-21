@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'json', '~> 2.0', '>= 2.0.3'
 gem 'httparty'
+gem 'prawn', '~> 2.2', '>= 2.2.2'
 
 group :development, :test do
   gem 'sqlite3'
